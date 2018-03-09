@@ -6,14 +6,6 @@ import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.horcrux.svg.SvgPackage;
 import com.github.wuxudong.rncharts.MPAndroidChartPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
-import com.horcrux.svg.SvgPackage;
-import com.github.wuxudong.rncharts.MPAndroidChartPackage;
-import com.github.wuxudong.rncharts.MPAndroidChartPackage;
-import com.horcrux.svg.SvgPackage;
-import com.github.wuxudong.rncharts.MPAndroidChartPackage;
-import com.horcrux.svg.SvgPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -37,14 +29,6 @@ public class MainApplication extends Application implements ReactApplication {
             new VectorIconsPackage(),
             new SvgPackage(),
             new MPAndroidChartPackage(),
-            new VectorIconsPackage(),
-            new VectorIconsPackage(),
-            new SvgPackage(),
-            new MPAndroidChartPackage(),
-            new MPAndroidChartPackage(),
-            new SvgPackage(),
-            new MPAndroidChartPackage(),
-            new SvgPackage()
       );
     }
 
