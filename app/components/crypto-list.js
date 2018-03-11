@@ -7,6 +7,7 @@ import { Actions } from 'react-native-router-flux';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { coinMarketCap } from '../api.js';
 
+import loadCryptoImage from '../images/crypto'
 const numeral = require('numeral');
 const colors = {
   priceUp: '#00FF68',
@@ -48,7 +49,7 @@ export default class App extends Component<{}> {
   _keyExtractor = (item, index) => item.id;
 
   cointImage( item ){
-    const img = require( '../images/crypto/btc.png' ) ;
+    const img = loadCryptoImage(item.symbol.toLowerCase());
     return(
       <Image
         style={{ width: 30, height: 30}}
