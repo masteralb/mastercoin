@@ -7,7 +7,9 @@
     "test": "jest",
     "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json",
     "release": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/ && cd android && ./gradlew assembleRelease",
-    "install-android": "adb install -r android/app/build/outputs/apk/app-release.apk"
+    "install-android": "adb install -r android/app/build/outputs/apk/app-release-unsigned.apk",
+    "generate-crypto-require-file": "CRYPTO_FOLDER=app/images/crypto node generate.js > app/images/crypto/index.js",
+    "gcrf": "npm run generate-crypto-require-file"
   },
   "dependencies": {
     "@ibm/type": "^0.5.4",
@@ -27,6 +29,8 @@
     "react-native-vector-icons": "^4.5.0"
   },
   "devDependencies": {
+    "acorn": "^5.5.3",
+    "astring": "^1.2.0",
     "babel-jest": "22.4.1",
     "babel-preset-react-native": "4.0.0",
     "jest": "22.4.2",
